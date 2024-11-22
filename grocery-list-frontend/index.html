@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grocery List</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styling.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="groceryContainer">
+      <div class="searchSide">
+        <h2>Search Products</h2>
+        <div class="searchBarContainer">
+          <input
+            type="text"
+            class="searchBox"
+            id="searchBox"
+            placeholder="Search for products..."
+          />
+        </div>
+        <div class="buttonContainer">
+          <button class="searchButton" id="searchButton">Search</button>
+          <button class="clearSearchButton" id="clearSearchButton">
+            Clear
+          </button>
+        </div>
+        <div class="searchContainer"></div>
+        <div id="productGrid"></div>
+        <div class="manualSearch">
+          <label for="productName">Enter Product Manually:</label>
+          <input
+            type="text"
+            id="productName"
+            placeholder="Enter product name here..."
+            maxlength="30"
+            ;
+          />
+          <div class="manualSearchControls">
+            <button class="decreaseButton" id="manDecreaseButton">-</button>
+            <input
+              type="number"
+              class="quantityFieldBox"
+              id="productQuantity"
+              value="1"
+              min="1"
+            />
+            <button class="increaseButton" id="manIncreaseButton" value="1">
+              +
+            </button>
+            <button class="manualAddToListButton" id="manualAddToListButton">
+              Add To List
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="listSide">
+        <h2>My List</h2>
+        <div id="listContainer"></div>
+        <button id="clearButton" class="clearButton">Clear List</button>
+      </div>
+    </div>
+    <script src="functionality.js"></script>
+  </body>
+</html>
